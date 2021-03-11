@@ -43,6 +43,10 @@ app.use("/api", paymentBRoutes);
 //port
 const port = process.env.PORT|| 8000;
 
+
+app.get('/', (req, res) => {
+	res.send('hellos...');
+});
 //Listener Port is Running
 app.listen(port , () => {
     console.log(`App is running at port ${port}`);

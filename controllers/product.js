@@ -110,19 +110,19 @@ exports.updateProduct = (req,res) => {
              })           
         }
 
-        // //destructure the field
-        // const{ name, description, price, category, stock} = fields;
+        //destructure the field
+        const{ name, description, price, category, stock} = fields;
 
-        // if(!name ||
-        //   !description ||
-        //   !price ||
-        //   !category ||
-        //   !stock
-        // ){
-        //     return res.status(400).json({
-        //         error: "Please enter the whole fields"
-        //     })
-        // }
+        if(!name ||
+          !description ||
+          !price ||
+          !category ||
+          !stock
+        ){
+            return res.status(400).json({
+                error: "Please enter the whole fields"
+            })
+        }
 
         //this is the updation code
         let product = req.product;
